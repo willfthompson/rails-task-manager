@@ -1,4 +1,8 @@
 show.html.erb
 
+<li><%= @task.details %></li>
 <h1><%=  @task.details %></h1>
+
+<%= link_to "Delete", task_path(@task.id), method: :delete %>
+<%= link_to "Edit details", edit_task_path(@task.id) %>
 <%= link_to "Back to all tasks", tasks_path %>
